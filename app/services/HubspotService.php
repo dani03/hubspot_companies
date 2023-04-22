@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\services;
+namespace App\services;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Http;
+
 class HubspotService
 {
     public static  function client() {

@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\services\CompanyService;
-use Illuminate\Http\Request;
-use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Http;
+use App\services\CompanyService;
 
 class HomeController extends Controller
 {

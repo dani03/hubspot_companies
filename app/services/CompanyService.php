@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\services;
+namespace App\services;
 
-use App\Http\repositories\CompanyRepository;
-use App\Http\services\contacts\ContactService;
-use App\Models\Company;
+use App\repositories\CompanyRepository;
+use App\services\contacts\ContactService;
 
 class CompanyService
 {
@@ -54,6 +53,10 @@ class CompanyService
     public function attachToAContact(int $contactId, int $companyId) {
        $company = $this->companyRepository->findCompany($companyId);
        $company->contacts()->attach($contactId);
+    }
+
+    public function getCompanies() {
+       return $this->companyRepository->findAll();
     }
 
 }

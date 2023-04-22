@@ -2,9 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Http\services\CompanyService;
+use App\services\CompanyService;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Http;
 
 class findentreprises extends Command
 {

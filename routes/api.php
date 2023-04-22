@@ -13,7 +13,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+//on crée une route qui se chargera d'appeler notre controleur Register et la methode __invoke sera appeler
+//par default
+Route::post('auth/register', \App\Http\Controllers\Api\V1\Auth\RegisterController::class);
+Route::post('auth/login', \App\Http\Controllers\Api\V1\Auth\LoginController::class);
+Route::get('companies', [\App\Http\Controllers\Api\V1\companies\CompanyController::class, 'index']);
+Route::middleware('auth:sanctum')->group( function (Request $request) {
+    Route::post('auth/logout', \App\Http\Controllers\Api\V1\Auth\LogoutController::class);
 });
+

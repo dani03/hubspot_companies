@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\repositories\contacts;
+namespace App\repositories\contacts;
 
 use App\Models\Contact;
 

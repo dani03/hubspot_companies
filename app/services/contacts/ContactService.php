@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\services\contacts;
+namespace App\services\contacts;
 
-use App\Http\repositories\contacts\ContactRepository;
-use App\Http\services\CompanyService;
+use App\repositories\contacts\ContactRepository;
+use App\services\CompanyService;
 
 class ContactService
 {
