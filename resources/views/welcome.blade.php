@@ -16,5 +16,7 @@
         </style>
     </head>
     <body class="antialiased">
+
+        <h1 class="text-xl text-center ">KAFFE!N PROJET</h1>
     </body>
 </html>
