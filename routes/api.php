@@ -18,7 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::post('auth/register', \App\Http\Controllers\Api\V1\Auth\RegisterController::class);
 Route::post('auth/login', \App\Http\Controllers\Api\V1\Auth\LoginController::class);
 Route::get('companies', [\App\Http\Controllers\Api\V1\companies\CompanyController::class, 'index']);
-Route::middleware('auth:sanctum')->group( function (Request $request) {
-    Route::post('auth/logout', \App\Http\Controllers\Api\V1\Auth\LogoutController::class);
-});
+Route::post('auth/logout', \App\Http\Controllers\Api\V1\Auth\LogoutController::class)->middleware('auth');
 
